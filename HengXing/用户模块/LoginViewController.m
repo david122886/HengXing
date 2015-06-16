@@ -1,0 +1,183 @@
+//
+//  LoginViewController.m
+//  ShangQingHui
+//
+//  Created by xxsy-ima001 on 15/5/16.
+//  Copyright (c) 2015年 davidliu. All rights reserved.
+//
+
+#import "LoginViewController.h"
+#import "LoginFilter.h"
+#import "ServiceManager.h"
+#import "MBProgressHUD.h"
+@interface LoginViewController()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *userNameField;
+@property (weak, nonatomic) IBOutlet UITextField *pwdField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginBackViewTopToSuperViewConstraint;
+@property (weak, nonatomic) IBOutlet UIButton *loginBt;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoTopSuperViewConstraint;
+
+@end
+
+@implementation LoginViewController
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    if (CGRectGetHeight([[UIScreen mainScreen] bounds]) < 568) {
+        self.logoTopSuperViewConstraint.constant = 20;
+        [self.view setNeedsUpdateConstraints];
+        [self.view layoutIfNeeded];
+    }
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.loginBt setBackgroundColor:[UIColor colorWithRed:243/255.0 green:120/255.0 blue:71/255.0 alpha:1]];
+    UserObj *user = [UserObj unarchive];
+    self.userNameField.text = user.userName;
+    self.pwdField.text = user.pwd;
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)backgroundTapGesture:(UITapGestureRecognizer *)sender {
+    [self.userNameField resignFirstResponder];
+    [self.pwdField resignFirstResponder];
+}
+
+- (IBAction)loginButtonClicked:(id)sender {
+    [self beginLoginWithUserName:self.userNameField.text andPwd:self.pwdField.text];
+}
+
+#pragma mark -
+#pragma mark -- UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    UITextField *field = (UITextField*)[self.view viewWithTag:textField.tag+1];
+    [textField resignFirstResponder];
+    if (field) {
+        [field becomeFirstResponder];
+    }else{
+//        [textField resignFirstResponder];
+        [self beginLoginWithUserName:self.userNameField.text andPwd:self.pwdField.text];
+        return YES;
+    }
+    return NO;
+}
+#pragma mark -
+
+#pragma mark -- 本地实现方法
+
+-(void)beginLoginWithUserName:(NSString*)userName andPwd:(NSString*)pwd{
+    NSLog(@"userName:%@,pwd:%@",userName,pwd);
+    __block BOOL filter = NO;
+    [LoginFilter verifyUserName:userName withFinshed:^(BOOL success, NSString *errorMsg) {
+        filter = success;
+        if (!success) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+    }];
+    if (!filter) {
+        return;
+    }
+    [LoginFilter verifyPwd:pwd withFinshed:^(BOOL success, NSString *errorMsg) {
+        filter = success;
+        if (!success) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:errorMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+    }];
+    
+    if (filter) {
+        MBProgressHUD *progress = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        progress.labelText = @"正在登录...";
+        [ServiceManager loginInWithUserName:userName andPwd:pwd withFinishedBlock:^(BOOL success,UserObj *user,NSString *errorMsg) {
+            if (success) {
+                [UserObj archiveWithUserName:userName withPwd:pwd];
+                [progress hide:YES];
+                [self loginSuccess];
+                
+            }else{
+                progress.labelText = errorMsg;
+                [progress hide:YES afterDelay:1];
+                [self loginFailure];
+            }
+        }];
+    }
+}
+
+///登录成功
+-(void)loginSuccess{
+    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"] animated:YES];
+}
+//登陆失败
+-(void)loginFailure{
+//    [self.pwdField becomeFirstResponder];
+    
+}
+#pragma mark -- 监听键盘弹出事件
+-(void)keyboardWillShowNotification:(NSNotification*)notification{
+    NSDictionary* userInfo = [notification userInfo];
+    UIView *view = self.userNameField.isFirstResponder?self.userNameField:self.pwdField;
+    // Get animation info from userInfo
+    NSTimeInterval animationDuration;
+    UIViewAnimationCurve animationCurve;
+    CGRect keyboardEndFrame;
+    [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+    [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+    [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
+    
+    CGRect newFrame = [self.view convertRect:view.frame toView:nil];
+    CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
+    CGFloat height = CGRectGetMinY(keyboardFrame) - CGRectGetMaxY(newFrame);
+    if (height < 50) {
+        self.loginBackViewTopToSuperViewConstraint.constant = height-50;
+        // Animate up or down
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:animationDuration];
+        [UIView setAnimationCurve:animationCurve];
+        
+        [self.view setNeedsUpdateConstraints];
+        [self.view layoutIfNeeded];
+        
+        [UIView commitAnimations];
+    }
+
+}
+
+-(void)keyboardWillHideNotification:(NSNotification*)notification{
+    NSDictionary* userInfo = [notification userInfo];
+    // Get animation info from userInfo
+    NSTimeInterval animationDuration;
+    UIViewAnimationCurve animationCurve;
+    CGRect keyboardEndFrame;
+    [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+    [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+    [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
+    
+    self.loginBackViewTopToSuperViewConstraint.constant = 0;
+    // Animate up or down
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    [UIView setAnimationCurve:animationCurve];
+    [self.view setNeedsUpdateConstraints];
+    [self.view layoutIfNeeded];
+    [UIView commitAnimations];
+}
+
+@end
