@@ -10,6 +10,7 @@
 
 @interface LoginFilter : NSObject
 +(void)verifyUserName:(NSString*)userName withFinshed:(void(^)(BOOL success,NSString *errorMsg))block;
-
++(void)verifyAccount:(NSString*)account withFinshed:(void(^)(BOOL success,NSString *errorMsg))block;
 +(void)verifyPwd:(NSString*)pwd withFinshed:(void(^)(BOOL success,NSString *errorMsg))block;
++(void)verifyPhoneNumber:(NSString*)phoneNumber withFinshed:(void(^)(BOOL success,NSString *errorMsg))block;
 @end

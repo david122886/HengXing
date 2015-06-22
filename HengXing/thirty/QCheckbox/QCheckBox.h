@@ -15,8 +15,7 @@
 @property(nonatomic, assign)BOOL checked;
 @property(nonatomic, retain)id userInfo;
 
-- (id)initWithDelegate:(id)delegate;
-
+-(void)setupDelegate:(id)delegate;
 @end
 
 @protocol QCheckBoxDelegate <NSObject>

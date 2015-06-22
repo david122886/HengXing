@@ -10,12 +10,24 @@
 #import "LoginFilter.h"
 #import "ServiceManager.h"
 #import "MBProgressHUD.h"
+#import "DRDropMenuButton.h"
+
+#define kUserNameHistoryFileName @"kUserNameHistoryFile"
 @interface LoginViewController()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginBackViewTopToSuperViewConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *loginBt;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *logoTopSuperViewConstraint;
+@property (weak, nonatomic) IBOutlet DRDropMenuButton *dropMenuButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerBt;
+- (IBAction)registerBtClicked:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *forgotPwdBt;
+- (IBAction)fortgotPwdBtClicked:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *autoLoginInBt;
+- (IBAction)autoLoginInBtClicked:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *savePwdBt;
+- (IBAction)savePwdBtClicked:(UIButton *)sender;
 
 @end
 
@@ -45,6 +57,20 @@
     UserObj *user = [UserObj unarchive];
     self.userNameField.text = user.userName;
     self.pwdField.text = user.pwd;
+    
+    __weak typeof(self) weakSelf = self;
+    [self.dropMenuButton addDropMenuTopView:self.userNameField insertSuperView:self.view withMaxHeight:200 withShowMenuItemStringArrayBlock:^NSArray *{
+        return [weakSelf historyNames];
+    } withSelectedItemBlock:^(NSString *itemString) {
+        weakSelf.userNameField.text = itemString;
+    }];
+    
+    
+    self.registerBt.titleLabel.attributedText = [[NSAttributedString alloc] initWithString:@"注册" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSUnderlineStyleAttributeName:@(NSUnderlineStyleThick)}];
+    self.forgotPwdBt.titleLabel.attributedText = [[NSAttributedString alloc] initWithString:@"忘记密码" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor],NSBackgroundColorAttributeName:[UIColor clearColor],NSUnderlineStyleAttributeName:@(NSUnderlineStyleThick)}];
+    
+    [self.forgotPwdBt setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+    [self.registerBt setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -53,13 +79,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)backgroundTapGesture:(UITapGestureRecognizer *)sender {
-    [self.userNameField resignFirstResponder];
-    [self.pwdField resignFirstResponder];
+
+
+-(void)saveUserNameWithName:(NSString*)name{
+    NSString *tmp = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (!tmp || [tmp isEqualToString:@""]) {
+        return;
+    }
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSMutableArray *userNames = [NSMutableArray arrayWithContentsOfFile:[path stringByAppendingPathComponent:kUserNameHistoryFileName]];
+    if (!userNames) {
+        userNames = @[].mutableCopy;
+    }
+    [userNames addObject:tmp];
+    [userNames writeToFile:[path stringByAppendingPathComponent:kUserNameHistoryFileName] atomically:YES];
 }
 
-- (IBAction)loginButtonClicked:(id)sender {
-    [self beginLoginWithUserName:self.userNameField.text andPwd:self.pwdField.text];
+-(NSArray*)historyNames{
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    return [NSMutableArray arrayWithContentsOfFile:[path stringByAppendingPathComponent:kUserNameHistoryFileName]];
 }
 
 #pragma mark -
@@ -82,6 +120,7 @@
 
 -(void)beginLoginWithUserName:(NSString*)userName andPwd:(NSString*)pwd{
     NSLog(@"userName:%@,pwd:%@",userName,pwd);
+    [self saveUserNameWithName:userName];
     __block BOOL filter = NO;
     [LoginFilter verifyUserName:userName withFinshed:^(BOOL success, NSString *errorMsg) {
         filter = success;
@@ -180,4 +219,23 @@
     [UIView commitAnimations];
 }
 
+
+- (IBAction)backgroundTapGesture:(UITapGestureRecognizer *)sender {
+    [self.userNameField resignFirstResponder];
+    [self.pwdField resignFirstResponder];
+    [self.dropMenuButton hiddleDropMenuListView];
+}
+
+- (IBAction)loginButtonClicked:(id)sender {
+    [self beginLoginWithUserName:self.userNameField.text andPwd:self.pwdField.text];
+}
+
+- (IBAction)registerBtClicked:(UIButton *)sender {
+}
+- (IBAction)fortgotPwdBtClicked:(UIButton *)sender {
+}
+- (IBAction)autoLoginInBtClicked:(UIButton *)sender {
+}
+- (IBAction)savePwdBtClicked:(UIButton *)sender {
+}
 @end

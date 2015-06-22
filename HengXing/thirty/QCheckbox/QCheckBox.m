@@ -12,22 +12,13 @@
 #define Q_ICON_TITLE_MARGIN                (5.0)
 
 @implementation QCheckBox
-
-@synthesize delegate = _delegate;
-@synthesize checked = _checked;
-@synthesize userInfo = _userInfo;
-
-- (id)initWithDelegate:(id)delegate {
-    self = [super init];
-    if (self) {
-        _delegate = delegate;
-        
-        self.exclusiveTouch = YES;
-        [self setImage:[UIImage imageNamed:@"checkbox1_unchecked.png"] forState:UIControlStateNormal];
-        [self setImage:[UIImage imageNamed:@"checkbox1_checked.png"] forState:UIControlStateSelected];
-        [self addTarget:self action:@selector(checkboxBtnChecked) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return self;
+-(void)setupDelegate:(id)delegate{
+    _delegate = delegate;
+    
+    self.exclusiveTouch = YES;
+    [self setImage:[UIImage imageNamed:@"checkbox1_unchecked.png"] forState:UIControlStateNormal];
+    [self setImage:[UIImage imageNamed:@"checkbox1_checked.png"] forState:UIControlStateSelected];
+    [self addTarget:self action:@selector(checkboxBtnChecked) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)setChecked:(BOOL)checked {
