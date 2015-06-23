@@ -38,13 +38,6 @@
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
-    [self.navigationController setNavigationBarHidden:YES];
-    
-    if (CGRectGetHeight([[UIScreen mainScreen] bounds]) < 568) {
-        self.logoTopSuperViewConstraint.constant = 20;
-        [self.view setNeedsUpdateConstraints];
-        [self.view layoutIfNeeded];
-    }
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

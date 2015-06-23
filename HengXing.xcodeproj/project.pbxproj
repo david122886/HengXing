@@ -75,6 +75,7 @@
 		665FD5901B3042E3000EBF1B /* WEPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD5101B3042E3000EBF1B /* WEPopoverController.m */; };
 		665FD5A81B304360000EBF1B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665FD5A71B304360000EBF1B /* CoreData.framework */; };
 		665FD5BE1B304D7A000EBF1B /* LoginVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD5BD1B304D7A000EBF1B /* LoginVCManager.m */; };
+		668A49931B3800650067F3F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668A49921B3800650067F3F3 /* RegisterViewController.m */; };
 		6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */; };
 		66C636571B35649100AD7458 /* DRDropMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C636561B35649100AD7458 /* DRDropMenuButton.m */; };
 /* End PBXBuildFile section */
@@ -240,6 +241,8 @@
 		665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MagicalRecord.xcodeproj; sourceTree = "<group>"; };
 		665FD5BC1B304D7A000EBF1B /* LoginVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCManager.h; sourceTree = "<group>"; };
 		665FD5BD1B304D7A000EBF1B /* LoginVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVCManager.m; sourceTree = "<group>"; };
+		668A49911B3800650067F3F3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		668A49921B3800650067F3F3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6691C5681B36F54600A4C6FC /* ForgotPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPwdViewController.h; sourceTree = "<group>"; };
 		6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPwdViewController.m; sourceTree = "<group>"; };
 		66C636551B35649100AD7458 /* DRDropMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDropMenuButton.h; sourceTree = "<group>"; };
@@ -335,6 +338,7 @@
 		665FD3D81B303B1B000EBF1B /* 用户模块 */ = {
 			isa = PBXGroup;
 			children = (
+				668A498C1B38002F0067F3F3 /* 注册 */,
 				66C636581B358A8500AD7458 /* 找回密码 */,
 				665FD3DB1B303E83000EBF1B /* LoginViewController.h */,
 				665FD3DC1B303E83000EBF1B /* LoginViewController.m */,
@@ -574,6 +578,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		668A498C1B38002F0067F3F3 /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				668A49911B3800650067F3F3 /* RegisterViewController.h */,
+				668A49921B3800650067F3F3 /* RegisterViewController.m */,
+			);
+			name = "注册";
+			sourceTree = "<group>";
+		};
 		66C636531B35647700AD7458 /* 自定义控件 */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,6 +781,7 @@
 				6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */,
 				665FD3B31B303ADB000EBF1B /* AppDelegate.m in Sources */,
 				665FD57C1B3042E3000EBF1B /* MJRefreshHeader.m in Sources */,
+				668A49931B3800650067F3F3 /* RegisterViewController.m in Sources */,
 				665FD57A1B3042E3000EBF1B /* MJRefreshGifFooter.m in Sources */,
 				665FD57E1B3042E3000EBF1B /* MJRefreshLegendHeader.m in Sources */,
 				665FD51A1B3042E3000EBF1B /* AFURLSessionManager.m in Sources */,
@@ -923,9 +937,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Weikang Bao (DRX28Q72LC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Weikang Bao (DRX28Q72LC)";
 				INFOPLIST_FILE = HengXing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3cb64044-4fff-4bda-be23-bdc6146640eb";
 			};
 			name = Debug;
 		};
@@ -933,9 +950,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xiao Xiang Shuyuan (7Y7NSKD85B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xiao Xiang Shuyuan (7Y7NSKD85B)";
 				INFOPLIST_FILE = HengXing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9699846c-d598-44c1-8514-238c02458333";
 			};
 			name = Release;
 		};
