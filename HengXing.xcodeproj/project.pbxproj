@@ -78,6 +78,7 @@
 		668A49931B3800650067F3F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668A49921B3800650067F3F3 /* RegisterViewController.m */; };
 		6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */; };
 		66C636571B35649100AD7458 /* DRDropMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C636561B35649100AD7458 /* DRDropMenuButton.m */; };
+		66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D746091B399517003BE438 /* AddressTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +248,8 @@
 		6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPwdViewController.m; sourceTree = "<group>"; };
 		66C636551B35649100AD7458 /* DRDropMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDropMenuButton.h; sourceTree = "<group>"; };
 		66C636561B35649100AD7458 /* DRDropMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRDropMenuButton.m; sourceTree = "<group>"; };
+		66D746081B399517003BE438 /* AddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewController.h; sourceTree = "<group>"; };
+		66D746091B399517003BE438 /* AddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,6 +586,8 @@
 			children = (
 				668A49911B3800650067F3F3 /* RegisterViewController.h */,
 				668A49921B3800650067F3F3 /* RegisterViewController.m */,
+				66D746081B399517003BE438 /* AddressTableViewController.h */,
+				66D746091B399517003BE438 /* AddressTableViewController.m */,
 			);
 			name = "注册";
 			sourceTree = "<group>";
@@ -780,6 +785,7 @@
 				665FD5811B3042E3000EBF1B /* UIView+MJExtension.m in Sources */,
 				6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */,
 				665FD3B31B303ADB000EBF1B /* AppDelegate.m in Sources */,
+				66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */,
 				665FD57C1B3042E3000EBF1B /* MJRefreshHeader.m in Sources */,
 				668A49931B3800650067F3F3 /* RegisterViewController.m in Sources */,
 				665FD57A1B3042E3000EBF1B /* MJRefreshGifFooter.m in Sources */,

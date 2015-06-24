@@ -8,6 +8,9 @@
 
 #import "RegisterViewController.h"
 #import "LoginFilter.h"
+#define kCitySegue @"citySegue"
+#define kProvinceSegue @"proviceSegue"
+
 @interface RegisterViewController ()<UITextFieldDelegate>
 #pragma mark -
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginBackViewTopToSuperViewConstraint;
@@ -38,8 +41,9 @@
 #pragma mark -
 
 #pragma mark -
-#pragma mark -- 新密码界面
-@property (weak, nonatomic) IBOutlet UIView *setupNewPwdView;
+#pragma mark -- 激活验证码界面
+@property (weak, nonatomic) IBOutlet UIView *securityCodeView;
+@property (weak, nonatomic) IBOutlet UITextField *securityCodeTextField;
 
 @property (weak, nonatomic) IBOutlet UITextField *rePwdNewTextField;
 
@@ -47,9 +51,16 @@
 
 
 #pragma mark -
-#pragma mark -- 修改新密码成功界面
+#pragma mark -- 注册成功界面
 
-@property (weak, nonatomic) IBOutlet UIView *pwdResultView;
+@property (weak, nonatomic) IBOutlet UIView *registerResultView;
+#pragma mark -
+
+#pragma mark -
+#pragma mark -- 本地数据
+@property (nonatomic,strong) NSString *probinceString;
+@property (nonatomic,strong) NSString *cityString;
+@property (nonatomic,strong) NSArray *brandsArray;
 #pragma mark -
 @end
 
@@ -60,6 +71,20 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
     [self.navigationController setNavigationBarHidden:NO];
+    
+    [self.provinceBt setTitle:self.probinceString?:@"身份" forState:UIControlStateNormal];
+    [self.cityBt setTitle:self.cityString?:@"城市" forState:UIControlStateNormal];
+    __block NSString *brandString = nil;
+    [self.brandsArray enumerateObjectsUsingBlock:^(NSString *brand, NSUInteger idx, BOOL *stop) {
+        brandString = brandString?[NSString stringWithFormat:@"%@,%@",brandString,brand]:brand;
+    }];
+    self.brandTextField.text = brandString;
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad {
@@ -70,10 +95,6 @@
     NSAttributedString *agreementLinkString = [[NSAttributedString alloc] initWithString:@"恒星电源用户协议" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor],NSUnderlineStyleAttributeName:@(NSUnderlineStyleThick)}];
     self.agreementLinkBt.titleLabel.attributedText = agreementLinkString;
     // Do any additional setup after loading the view.
-}
-
--(void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -290,24 +311,33 @@
      {
         [self.nextStepBt setTitle:@"注册" forState:UIControlStateNormal];
         [nextTipTitleString addAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:(NSRange){3,6}];
-        [self.setupNewPwdView setHidden:YES];
-        [self.pwdResultView setHidden:YES];
+        [self.securityCodeView setHidden:YES];
+        [self.registerResultView setHidden:YES];
+        [self.registerPersonInfoView setHidden:NO];
+        [self.agreementBt setHidden:NO];
+        [self.agreementLinkBt setHidden:NO];
      }
             break;
         case 1:
      {
         [self.nextStepBt setTitle:@"激活" forState:UIControlStateNormal];
         [nextTipTitleString addAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:(NSRange){15,5}];
-        [self.setupNewPwdView setHidden:NO];
-        [self.pwdResultView setHidden:YES];
+        [self.securityCodeView setHidden:YES];
+        [self.registerResultView setHidden:YES];
+        [self.registerPersonInfoView setHidden:NO];
+        [self.agreementBt setHidden:YES];
+        [self.agreementLinkBt setHidden:YES];
      }
             break;
         case 2:
      {
         [self.nextStepBt setTitle:@"确定" forState:UIControlStateNormal];
         [nextTipTitleString addAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:(NSRange){26,4}];
-        [self.setupNewPwdView setHidden:YES];
-        [self.pwdResultView setHidden:NO];
+        [self.securityCodeView setHidden:YES];
+        [self.registerResultView setHidden:NO];
+        [self.registerPersonInfoView setHidden:YES];
+        [self.agreementBt setHidden:YES];
+        [self.agreementLinkBt setHidden:YES];
      }
             break;
         default:
