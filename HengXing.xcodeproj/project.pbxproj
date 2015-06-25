@@ -77,6 +77,7 @@
 		665FD5BE1B304D7A000EBF1B /* LoginVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD5BD1B304D7A000EBF1B /* LoginVCManager.m */; };
 		668A49931B3800650067F3F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668A49921B3800650067F3F3 /* RegisterViewController.m */; };
 		6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */; };
+		66AB58C81B3C2380002866E8 /* BrandTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AB58C71B3C2380002866E8 /* BrandTableViewController.m */; };
 		66C636571B35649100AD7458 /* DRDropMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C636561B35649100AD7458 /* DRDropMenuButton.m */; };
 		66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D746091B399517003BE438 /* AddressTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -246,6 +247,8 @@
 		668A49921B3800650067F3F3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6691C5681B36F54600A4C6FC /* ForgotPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPwdViewController.h; sourceTree = "<group>"; };
 		6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPwdViewController.m; sourceTree = "<group>"; };
+		66AB58C61B3C2380002866E8 /* BrandTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandTableViewController.h; sourceTree = "<group>"; };
+		66AB58C71B3C2380002866E8 /* BrandTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandTableViewController.m; sourceTree = "<group>"; };
 		66C636551B35649100AD7458 /* DRDropMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDropMenuButton.h; sourceTree = "<group>"; };
 		66C636561B35649100AD7458 /* DRDropMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRDropMenuButton.m; sourceTree = "<group>"; };
 		66D746081B399517003BE438 /* AddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewController.h; sourceTree = "<group>"; };
@@ -588,6 +591,8 @@
 				668A49921B3800650067F3F3 /* RegisterViewController.m */,
 				66D746081B399517003BE438 /* AddressTableViewController.h */,
 				66D746091B399517003BE438 /* AddressTableViewController.m */,
+				66AB58C61B3C2380002866E8 /* BrandTableViewController.h */,
+				66AB58C71B3C2380002866E8 /* BrandTableViewController.m */,
 			);
 			name = "注册";
 			sourceTree = "<group>";
@@ -802,6 +807,7 @@
 				665FD5831B3042E3000EBF1B /* KxMenu.m in Sources */,
 				665FD5821B3042E3000EBF1B /* NSData+MKBase64.m in Sources */,
 				665FD3FE1B304234000EBF1B /* UserObj.m in Sources */,
+				66AB58C81B3C2380002866E8 /* BrandTableViewController.m in Sources */,
 				665FD3FF1B304234000EBF1B /* UserObj+save.m in Sources */,
 				665FD5781B3042E3000EBF1B /* MJRefreshConst.m in Sources */,
 				665FD5161B3042E3000EBF1B /* AFSecurityPolicy.m in Sources */,
