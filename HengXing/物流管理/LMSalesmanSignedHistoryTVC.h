@@ -12,5 +12,5 @@
 #import "NoRotateTVCViewController.h"
 
 @interface LMSalesmanSignedHistoryTVC : NoRotateTVCViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end

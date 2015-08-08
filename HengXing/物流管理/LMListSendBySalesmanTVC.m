@@ -3,7 +3,8 @@
 //  Created by 李宏亮 on 15/7/8.
 //  Copyright (c) 2015年 ___xiaoxiangwenxue___. All rights reserved.
 //
-
+#import "UICommon.h"
+#import "LMSendBySalesmanHistoryTVC.h"
 #import "LMListSendBySalesmanTVC.h"
 
 @interface LMListSendBySalesmanTVC ()
@@ -67,6 +68,11 @@
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"cellData"];
         UIView *contentView = cell.contentView;
+//        for (UIView *view in contentView.subviews) {
+//            view.layer.borderColor = [UIColor redColor].CGColor;
+//            view.layer.borderWidth = .6;
+//        }
+        
         UILabel *sendTimeLabel = (UILabel *)[contentView viewWithTag:1];   //发货时间
         UILabel *batteryQuantityLabel = (UILabel *)[contentView viewWithTag:2];  //电池数量
         UILabel *logisticsCompanyLabel = (UILabel *)[contentView viewWithTag:3]; //物流公司
@@ -75,34 +81,11 @@
         
         NSString *officeString = @"高新区金沙路181号";
         NSString *officeTelephoneString = @"137798886888";
-        [self _handleOfficeLabel:officeLabel withOfficeString:officeString withTelephoneNO:officeTelephoneString];
+        [UICommon handleLabel:officeLabel withVC:self withString:officeString withTelephoneNO:officeTelephoneString withSelector:@selector(tapAtOfficeTelephone:)];
         
     }
     
     return cell;
-}
-
-//处理办事处label, 如有电话号码, 将号码变色, 并支持点击
-- (void)_handleOfficeLabel:(UILabel *)officeLabel withOfficeString:(NSString *)officeString withTelephoneNO:(NSString *)officeTelephone {
-    if (officeTelephone.length < 1) {
-        officeLabel.text = officeString;
-        officeLabel.userInteractionEnabled = NO;
-    } else {
-        NSString *combinedString = [NSString stringWithFormat:@"%@(%@)", officeString, officeTelephone];
-        NSRange telephoneRange = [combinedString rangeOfString:officeTelephone options:NSBackwardsSearch];
-        NSMutableAttributedString *attriString = [[NSMutableAttributedString alloc] initWithString:combinedString];
-        [attriString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:telephoneRange];
-        officeLabel.attributedText = attriString;
-        
-        officeLabel.userInteractionEnabled = YES;
-        UIGestureRecognizer *gesture = [officeLabel.gestureRecognizers firstObject];
-        if (gesture) {
-            [officeLabel removeGestureRecognizer:gesture];
-        }
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAtOfficeTelephone:)];
-        [officeLabel addGestureRecognizer:tap];
-        
-    }
 }
 
 #pragma mark user Interactions
@@ -113,7 +96,7 @@
 
 //历史记录
 - (void)clickAtHistoryButton:(id)sender {
-    
+    [LMSendBySalesmanHistoryTVC show:self.navigationController];
 }
 
 //点击办事处电话
@@ -127,7 +110,8 @@
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url];
     } else {
-        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"无法拨号" message:@"" delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil];
+        [alert show];
     }
     
 }

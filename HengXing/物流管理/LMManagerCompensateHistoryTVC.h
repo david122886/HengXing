@@ -12,5 +12,5 @@
 #import "NoRotateTVCViewController.h"
 
 @interface LMManagerCompensateHistoryTVC : NoRotateTVCViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end

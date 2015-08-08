@@ -51,10 +51,14 @@
     _containerView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     UIStoryboard *story = self.storyboard;
-    if (_isSalesMan) {
+    if (_isSalesMan) { //业务员界面
+        [_leftTabButton setTitle:@"您发出的故障电池" forState:UIControlStateNormal];
+        [_rightTabButton setTitle:@"等待您签收的补赔电池" forState:UIControlStateNormal];
         _leftViewController = [story instantiateViewControllerWithIdentifier:@"LMListSendBySalesmanTVC"]; //您发出的故障电池
         _rightViewController = [story instantiateViewControllerWithIdentifier:@"LMListWaitSalesmanSignTVC"]; //等待您签收的补偿电池
-    } else {
+    } else {   //维修主管界面
+        [_leftTabButton setTitle:@"签收客诉电池" forState:UIControlStateNormal];
+        [_rightTabButton setTitle:@"等待补赔电池" forState:UIControlStateNormal];
         _leftViewController = [story instantiateViewControllerWithIdentifier:@"LMListSignedByManagerTVC"]; //签收客诉电池
         _rightViewController = [story instantiateViewControllerWithIdentifier:@"LMListWaitManagerCompensateTVC"]; //等待补偿电池
     }

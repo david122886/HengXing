@@ -85,6 +85,7 @@
 		9377334D1B67D8D30091CFAF /* testtt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9377334C1B67D8D30091CFAF /* testtt.storyboard */; };
 		937733511B67D9030091CFAF /* TestttTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 937733501B67D9030091CFAF /* TestttTVC.m */; };
 		93D2E2A21B52A63B0044564C /* SIStatisticalInformationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2E2A11B52A63B0044564C /* SIStatisticalInformationTVC.m */; };
+		93F368701B70F459008EDD18 /* UICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F3686F1B70F459008EDD18 /* UICommon.m */; };
 		93FEBDA91B4D5F6000D3F9D7 /* NoRotateTVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDA61B4D5F6000D3F9D7 /* NoRotateTVCViewController.m */; };
 		93FEBDAA1B4D5F6000D3F9D7 /* NoRotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDA81B4D5F6000D3F9D7 /* NoRotateViewController.m */; };
 		93FEBDAD1B4D5FF500D3F9D7 /* TRTestRecordListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDAC1B4D5FF500D3F9D7 /* TRTestRecordListTVC.m */; };
@@ -256,6 +257,8 @@
 		937733501B67D9030091CFAF /* TestttTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestttTVC.m; sourceTree = "<group>"; };
 		93D2E2A01B52A63B0044564C /* SIStatisticalInformationTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIStatisticalInformationTVC.h; sourceTree = "<group>"; };
 		93D2E2A11B52A63B0044564C /* SIStatisticalInformationTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIStatisticalInformationTVC.m; sourceTree = "<group>"; };
+		93F3686E1B70F459008EDD18 /* UICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICommon.h; sourceTree = "<group>"; };
+		93F3686F1B70F459008EDD18 /* UICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICommon.m; sourceTree = "<group>"; };
 		93FEBDA51B4D5F6000D3F9D7 /* NoRotateTVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoRotateTVCViewController.h; sourceTree = "<group>"; };
 		93FEBDA61B4D5F6000D3F9D7 /* NoRotateTVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoRotateTVCViewController.m; sourceTree = "<group>"; };
 		93FEBDA71B4D5F6000D3F9D7 /* NoRotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoRotateViewController.h; sourceTree = "<group>"; };
@@ -705,6 +708,8 @@
 				93FEBDA61B4D5F6000D3F9D7 /* NoRotateTVCViewController.m */,
 				93FEBDA71B4D5F6000D3F9D7 /* NoRotateViewController.h */,
 				93FEBDA81B4D5F6000D3F9D7 /* NoRotateViewController.m */,
+				93F3686E1B70F459008EDD18 /* UICommon.h */,
+				93F3686F1B70F459008EDD18 /* UICommon.m */,
 			);
 			name = LHLTools;
 			path = thirty/LHLTools;
@@ -935,6 +940,7 @@
 				93FEBDC01B4D6BF800D3F9D7 /* LMListSendBySalesmanTVC.m in Sources */,
 				665FD3B61B303ADB000EBF1B /* HengXing.xcdatamodeld in Sources */,
 				93FEBDBD1B4D6B8A00D3F9D7 /* LMContainerVC.m in Sources */,
+				93F368701B70F459008EDD18 /* UICommon.m in Sources */,
 				665FD5811B3042E3000EBF1B /* UIView+MJExtension.m in Sources */,
 				6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */,
 				665FD3B31B303ADB000EBF1B /* AppDelegate.m in Sources */,

@@ -12,5 +12,5 @@
 #import "NoRotateTVCViewController.h"
 
 @interface LMSignedByManagerHistoryTVC : NoRotateTVCViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end
