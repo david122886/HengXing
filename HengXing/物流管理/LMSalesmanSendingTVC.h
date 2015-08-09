@@ -9,8 +9,8 @@
  业务员界面
  返厂电池发货
  */
-#import "NoRotateViewController.h"
+#import "NoRotateTVCViewController.h"
 
-@interface LMSalesmanSendingVC : NoRotateViewController
-
+@interface LMSalesmanSendingTVC : NoRotateTVCViewController
++ (void)show:(UINavigationController *)nvc;
 @end

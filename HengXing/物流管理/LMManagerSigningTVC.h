@@ -9,8 +9,8 @@
  维修主管界面
  签收返厂电池
  */
-#import "NoRotateViewController.h"
+#import "NoRotateTVCViewController.h"
 
-@interface LMManagerSigningVC : NoRotateViewController
-
+@interface LMManagerSigningTVC : NoRotateTVCViewController
++ (void)show:(UINavigationController *)nvc;
 @end

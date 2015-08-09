@@ -82,6 +82,10 @@
 		66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D746091B399517003BE438 /* AddressTableViewController.m */; };
 		9348AEB71B692E1A00C1DEBE /* LMTab_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9348AEB51B692E1A00C1DEBE /* LMTab_btn_highlight@2x.png */; };
 		9348AEB81B692E1A00C1DEBE /* LMTab_btn_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9348AEB61B692E1A00C1DEBE /* LMTab_btn_normal@2x.png */; };
+		935D18931B764AA30028D867 /* van@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 935D18921B764AA30028D867 /* van@2x.png */; };
+		935D18951B764E1F0028D867 /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 935D18941B764E1F0028D867 /* mail@2x.png */; };
+		935D18971B76602A0028D867 /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 935D18961B76602A0028D867 /* barcode@2x.png */; };
+		9362537C1B77243D0061C531 /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9362537B1B77243D0061C531 /* checkbox@2x.png */; };
 		9377334D1B67D8D30091CFAF /* testtt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9377334C1B67D8D30091CFAF /* testtt.storyboard */; };
 		937733511B67D9030091CFAF /* TestttTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 937733501B67D9030091CFAF /* TestttTVC.m */; };
 		93D2E2A21B52A63B0044564C /* SIStatisticalInformationTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D2E2A11B52A63B0044564C /* SIStatisticalInformationTVC.m */; };
@@ -97,11 +101,11 @@
 		93FEBDC61B4D6FC900D3F9D7 /* LMListSignedByManagerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDC51B4D6FC900D3F9D7 /* LMListSignedByManagerTVC.m */; };
 		93FEBDC91B4D708A00D3F9D7 /* LMListWaitManagerCompensateTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDC81B4D708A00D3F9D7 /* LMListWaitManagerCompensateTVC.m */; };
 		93FEBDCC1B4D71C200D3F9D7 /* LMSignedByManagerHistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDCB1B4D71C200D3F9D7 /* LMSignedByManagerHistoryTVC.m */; };
-		93FEBDCF1B4D722500D3F9D7 /* LMManagerSigningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDCE1B4D722500D3F9D7 /* LMManagerSigningVC.m */; };
+		93FEBDCF1B4D722500D3F9D7 /* LMManagerSigningTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDCE1B4D722500D3F9D7 /* LMManagerSigningTVC.m */; };
 		93FEBDD21B4D72A000D3F9D7 /* LMManagerCompensateHistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDD11B4D72A000D3F9D7 /* LMManagerCompensateHistoryTVC.m */; };
 		93FEBDD51B4D730200D3F9D7 /* LMManagerCompensatingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDD41B4D730200D3F9D7 /* LMManagerCompensatingTVC.m */; };
 		93FEBDD81B4D739400D3F9D7 /* LMSendBySalesmanHistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDD71B4D739400D3F9D7 /* LMSendBySalesmanHistoryTVC.m */; };
-		93FEBDDB1B4D742600D3F9D7 /* LMSalesmanSendingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDDA1B4D742600D3F9D7 /* LMSalesmanSendingVC.m */; };
+		93FEBDDB1B4D742600D3F9D7 /* LMSalesmanSendingTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDDA1B4D742600D3F9D7 /* LMSalesmanSendingTVC.m */; };
 		93FEBDDE1B4D749400D3F9D7 /* LMSalesmanSignedHistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDDD1B4D749400D3F9D7 /* LMSalesmanSignedHistoryTVC.m */; };
 		93FEBDE11B4D74D600D3F9D7 /* LMSalesmanSigningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDE01B4D74D600D3F9D7 /* LMSalesmanSigningVC.m */; };
 		93FEBDE41B4D756900D3F9D7 /* WPWarrantyPeriodQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FEBDE31B4D756900D3F9D7 /* WPWarrantyPeriodQueryVC.m */; };
@@ -252,6 +256,10 @@
 		66D746091B399517003BE438 /* AddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewController.m; sourceTree = "<group>"; };
 		9348AEB51B692E1A00C1DEBE /* LMTab_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LMTab_btn_highlight@2x.png"; sourceTree = "<group>"; };
 		9348AEB61B692E1A00C1DEBE /* LMTab_btn_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LMTab_btn_normal@2x.png"; sourceTree = "<group>"; };
+		935D18921B764AA30028D867 /* van@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "van@2x.png"; sourceTree = "<group>"; };
+		935D18941B764E1F0028D867 /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail@2x.png"; sourceTree = "<group>"; };
+		935D18961B76602A0028D867 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barcode@2x.png"; sourceTree = "<group>"; };
+		9362537B1B77243D0061C531 /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
 		9377334C1B67D8D30091CFAF /* testtt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = testtt.storyboard; sourceTree = "<group>"; };
 		9377334F1B67D9030091CFAF /* TestttTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestttTVC.h; sourceTree = "<group>"; };
 		937733501B67D9030091CFAF /* TestttTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestttTVC.m; sourceTree = "<group>"; };
@@ -281,16 +289,16 @@
 		93FEBDC81B4D708A00D3F9D7 /* LMListWaitManagerCompensateTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMListWaitManagerCompensateTVC.m; sourceTree = "<group>"; };
 		93FEBDCA1B4D71C200D3F9D7 /* LMSignedByManagerHistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSignedByManagerHistoryTVC.h; sourceTree = "<group>"; };
 		93FEBDCB1B4D71C200D3F9D7 /* LMSignedByManagerHistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSignedByManagerHistoryTVC.m; sourceTree = "<group>"; };
-		93FEBDCD1B4D722500D3F9D7 /* LMManagerSigningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMManagerSigningVC.h; sourceTree = "<group>"; };
-		93FEBDCE1B4D722500D3F9D7 /* LMManagerSigningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMManagerSigningVC.m; sourceTree = "<group>"; };
+		93FEBDCD1B4D722500D3F9D7 /* LMManagerSigningTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMManagerSigningTVC.h; sourceTree = "<group>"; };
+		93FEBDCE1B4D722500D3F9D7 /* LMManagerSigningTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMManagerSigningTVC.m; sourceTree = "<group>"; };
 		93FEBDD01B4D72A000D3F9D7 /* LMManagerCompensateHistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMManagerCompensateHistoryTVC.h; sourceTree = "<group>"; };
 		93FEBDD11B4D72A000D3F9D7 /* LMManagerCompensateHistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMManagerCompensateHistoryTVC.m; sourceTree = "<group>"; };
 		93FEBDD31B4D730200D3F9D7 /* LMManagerCompensatingTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMManagerCompensatingTVC.h; sourceTree = "<group>"; };
 		93FEBDD41B4D730200D3F9D7 /* LMManagerCompensatingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMManagerCompensatingTVC.m; sourceTree = "<group>"; };
 		93FEBDD61B4D739400D3F9D7 /* LMSendBySalesmanHistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSendBySalesmanHistoryTVC.h; sourceTree = "<group>"; };
 		93FEBDD71B4D739400D3F9D7 /* LMSendBySalesmanHistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSendBySalesmanHistoryTVC.m; sourceTree = "<group>"; };
-		93FEBDD91B4D742600D3F9D7 /* LMSalesmanSendingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSalesmanSendingVC.h; sourceTree = "<group>"; };
-		93FEBDDA1B4D742600D3F9D7 /* LMSalesmanSendingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSalesmanSendingVC.m; sourceTree = "<group>"; };
+		93FEBDD91B4D742600D3F9D7 /* LMSalesmanSendingTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSalesmanSendingTVC.h; sourceTree = "<group>"; };
+		93FEBDDA1B4D742600D3F9D7 /* LMSalesmanSendingTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSalesmanSendingTVC.m; sourceTree = "<group>"; };
 		93FEBDDC1B4D749400D3F9D7 /* LMSalesmanSignedHistoryTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSalesmanSignedHistoryTVC.h; sourceTree = "<group>"; };
 		93FEBDDD1B4D749400D3F9D7 /* LMSalesmanSignedHistoryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSalesmanSignedHistoryTVC.m; sourceTree = "<group>"; };
 		93FEBDDF1B4D74D600D3F9D7 /* LMSalesmanSigningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSalesmanSigningVC.h; sourceTree = "<group>"; };
@@ -667,8 +675,12 @@
 		9348AEB41B692A7800C1DEBE /* temp */ = {
 			isa = PBXGroup;
 			children = (
+				935D18961B76602A0028D867 /* barcode@2x.png */,
 				9348AEB51B692E1A00C1DEBE /* LMTab_btn_highlight@2x.png */,
 				9348AEB61B692E1A00C1DEBE /* LMTab_btn_normal@2x.png */,
+				935D18921B764AA30028D867 /* van@2x.png */,
+				935D18941B764E1F0028D867 /* mail@2x.png */,
+				9362537B1B77243D0061C531 /* checkbox@2x.png */,
 			);
 			name = temp;
 			sourceTree = "<group>";
@@ -783,16 +795,16 @@
 				93FEBDC81B4D708A00D3F9D7 /* LMListWaitManagerCompensateTVC.m */,
 				93FEBDCA1B4D71C200D3F9D7 /* LMSignedByManagerHistoryTVC.h */,
 				93FEBDCB1B4D71C200D3F9D7 /* LMSignedByManagerHistoryTVC.m */,
-				93FEBDCD1B4D722500D3F9D7 /* LMManagerSigningVC.h */,
-				93FEBDCE1B4D722500D3F9D7 /* LMManagerSigningVC.m */,
+				93FEBDCD1B4D722500D3F9D7 /* LMManagerSigningTVC.h */,
+				93FEBDCE1B4D722500D3F9D7 /* LMManagerSigningTVC.m */,
 				93FEBDD01B4D72A000D3F9D7 /* LMManagerCompensateHistoryTVC.h */,
 				93FEBDD11B4D72A000D3F9D7 /* LMManagerCompensateHistoryTVC.m */,
 				93FEBDD31B4D730200D3F9D7 /* LMManagerCompensatingTVC.h */,
 				93FEBDD41B4D730200D3F9D7 /* LMManagerCompensatingTVC.m */,
 				93FEBDD61B4D739400D3F9D7 /* LMSendBySalesmanHistoryTVC.h */,
 				93FEBDD71B4D739400D3F9D7 /* LMSendBySalesmanHistoryTVC.m */,
-				93FEBDD91B4D742600D3F9D7 /* LMSalesmanSendingVC.h */,
-				93FEBDDA1B4D742600D3F9D7 /* LMSalesmanSendingVC.m */,
+				93FEBDD91B4D742600D3F9D7 /* LMSalesmanSendingTVC.h */,
+				93FEBDDA1B4D742600D3F9D7 /* LMSalesmanSendingTVC.m */,
 				93FEBDDC1B4D749400D3F9D7 /* LMSalesmanSignedHistoryTVC.h */,
 				93FEBDDD1B4D749400D3F9D7 /* LMSalesmanSignedHistoryTVC.m */,
 				93FEBDDF1B4D74D600D3F9D7 /* LMSalesmanSigningVC.h */,
@@ -883,19 +895,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9348AEB81B692E1A00C1DEBE /* LMTab_btn_normal@2x.png in Resources */,
+				935D18931B764AA30028D867 /* van@2x.png in Resources */,
 				665FD5861B3042E3000EBF1B /* popoverArrowDown@2x.png in Resources */,
 				665FD3E91B304072000EBF1B /* checkbox1_unchecked@2x.png in Resources */,
 				665FD5891B3042E3000EBF1B /* popoverArrowRight.png in Resources */,
 				665FD3BC1B303ADB000EBF1B /* Main.storyboard in Resources */,
 				665FD58B1B3042E3000EBF1B /* popoverArrowUp.png in Resources */,
 				665FD58D1B3042E3000EBF1B /* popoverBg.png in Resources */,
+				935D18951B764E1F0028D867 /* mail@2x.png in Resources */,
 				665FD58E1B3042E3000EBF1B /* popoverBg@2x.png in Resources */,
 				665FD3DA1B303B38000EBF1B /* User.storyboard in Resources */,
 				665FD3C11B303ADB000EBF1B /* LaunchScreen.xib in Resources */,
 				9377334D1B67D8D30091CFAF /* testtt.storyboard in Resources */,
+				935D18971B76602A0028D867 /* barcode@2x.png in Resources */,
 				665FD3E61B304072000EBF1B /* checkbox1_checked.png in Resources */,
 				665FD5761B3042E3000EBF1B /* MJRefresh.bundle in Resources */,
 				665FD5881B3042E3000EBF1B /* popoverArrowLeft@2x.png in Resources */,
+				9362537C1B77243D0061C531 /* checkbox@2x.png in Resources */,
 				9348AEB71B692E1A00C1DEBE /* LMTab_btn_highlight@2x.png in Resources */,
 				665FD3BE1B303ADB000EBF1B /* Images.xcassets in Resources */,
 				665FD5871B3042E3000EBF1B /* popoverArrowLeft.png in Resources */,
@@ -924,7 +940,7 @@
 			files = (
 				665FD51D1B3042E3000EBF1B /* UIAlertView+AFNetworking.m in Sources */,
 				665FD51F1B3042E3000EBF1B /* UIImageView+AFNetworking.m in Sources */,
-				93FEBDDB1B4D742600D3F9D7 /* LMSalesmanSendingVC.m in Sources */,
+				93FEBDDB1B4D742600D3F9D7 /* LMSalesmanSendingTVC.m in Sources */,
 				665FD58F1B3042E3000EBF1B /* WEPopoverContainerView.m in Sources */,
 				665FD57F1B3042E3000EBF1B /* UIScrollView+MJExtension.m in Sources */,
 				665FD51E1B3042E3000EBF1B /* UIButton+AFNetworking.m in Sources */,
@@ -970,7 +986,7 @@
 				665FD5161B3042E3000EBF1B /* AFSecurityPolicy.m in Sources */,
 				665FD3B91B303ADB000EBF1B /* ViewController.m in Sources */,
 				665FD5181B3042E3000EBF1B /* AFURLRequestSerialization.m in Sources */,
-				93FEBDCF1B4D722500D3F9D7 /* LMManagerSigningVC.m in Sources */,
+				93FEBDCF1B4D722500D3F9D7 /* LMManagerSigningTVC.m in Sources */,
 				665FD3B01B303ADB000EBF1B /* main.m in Sources */,
 				665FD5801B3042E3000EBF1B /* UIScrollView+MJRefresh.m in Sources */,
 				93FEBDE11B4D74D600D3F9D7 /* LMSalesmanSigningVC.m in Sources */,

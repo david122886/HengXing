@@ -1,1 +1,13 @@
+#xcode
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.xcbkptlist
+project.xcworkspace/
+xcuserdata/
+
+#OS X
 *.DS_Store
+*.bak
+/.svn/*
