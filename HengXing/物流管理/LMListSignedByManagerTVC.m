@@ -8,6 +8,8 @@
 #import "UICommon.h"
 #import "LMListSignedByManagerTVC.h"
 #import "LMSignedByManagerHistoryTVC.h"
+#import "LMManagerSigningTVC.h"
+
 @interface LMListSignedByManagerTVC ()
 
 @end
@@ -126,5 +128,6 @@
     UITableViewCell *cell = (UITableViewCell *)sender.superview.superview;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     //根据indexPath进行签收
+    [LMManagerSigningTVC show:self.navigationController];
 }
 @end

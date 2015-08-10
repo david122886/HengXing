@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _isSalesMan = YES;
+    _isSalesMan = NO;
     [self _initView];
     _leftTabSelected = YES;
 }
@@ -84,13 +84,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    _rightViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
+    _leftViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
     NSLog(@"containerFrame:%@", NSStringFromCGRect(_containerView.frame));
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    _rightViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
-    _leftViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
+//    _rightViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
+//    _leftViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
     NSLog(@"containerFrame:%@", NSStringFromCGRect(_containerView.frame));
 }
 

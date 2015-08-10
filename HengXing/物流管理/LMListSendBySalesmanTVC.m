@@ -6,6 +6,7 @@
 #import "UICommon.h"
 #import "LMSendBySalesmanHistoryTVC.h"
 #import "LMListSendBySalesmanTVC.h"
+#import "LMSalesmanSendingTVC.h"
 
 @interface LMListSendBySalesmanTVC ()
 
@@ -91,7 +92,7 @@
 #pragma mark user Interactions
 //发货
 - (void)clickAtSendButton:(id)sender {
-    
+    [LMSalesmanSendingTVC show:self.navigationController];
 }
 
 //历史记录

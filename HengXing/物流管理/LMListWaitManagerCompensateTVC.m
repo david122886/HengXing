@@ -8,6 +8,7 @@
 #import "UICommon.h"
 #import "LMManagerCompensateHistoryTVC.h"
 #import "LMListWaitManagerCompensateTVC.h"
+#import "LMManagerCompensatingTVC.h"
 
 @interface LMListWaitManagerCompensateTVC ()
 
@@ -128,6 +129,7 @@
     UITableViewCell *cell = (UITableViewCell *)sender.superview.superview;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     //根据indexPath进行签收
+    [LMManagerCompensatingTVC show:self.navigationController];
 }
 
 @end
