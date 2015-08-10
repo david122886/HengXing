@@ -1092,7 +1092,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cgw-wQ-946">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="如果搜索不到锂电检测设备,请检查: 1.检测仪设备是否插在电池组上,且电源灯亮起. 2.是否有其它手机连接上检测仪。 3.手机和检测仪之间的距离是否超出10米。" id="hVa-D9-cMA">
+                                <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="如果搜索不到锂电检测设备,请检查:
+1.检测仪设备是否插在电池组上,且电源灯亮起.
+2.是否有其它手机连接上检测仪。
+3.手机和检测仪之间的距离是否超出10米。" id="hVa-D9-cMA">
                                     <rect key="frame" x="0.0" y="154" width="600" height="58"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
