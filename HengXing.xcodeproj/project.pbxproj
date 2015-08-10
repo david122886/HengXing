@@ -102,34 +102,6 @@
 			remoteGlobalIDString = 665FD3A91B303ADB000EBF1B;
 			remoteInfo = HengXing;
 		};
-		665FD5B41B3043FF000EBF1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF97AB17498414008D9D13;
-			remoteInfo = "libMagicalRecord-iOS";
-		};
-		665FD5B61B3043FF000EBF1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF97BB1749843F008D9D13;
-			remoteInfo = "libMagicalRecord-OSX";
-		};
-		665FD5B81B3043FF000EBF1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF97FF174984CA008D9D13;
-			remoteInfo = "MagicalRecordTests-iOS";
-		};
-		665FD5BA1B3043FF000EBF1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C7CF9816174984E4008D9D13;
-			remoteInfo = "MagicalRecordTests-OSX";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -258,7 +230,6 @@
 		665FD5101B3042E3000EBF1B /* WEPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEPopoverController.m; sourceTree = "<group>"; };
 		665FD5111B3042E3000EBF1B /* WEPopoverParentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEPopoverParentView.h; sourceTree = "<group>"; };
 		665FD5A71B304360000EBF1B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MagicalRecord.xcodeproj; sourceTree = "<group>"; };
 		665FD5BC1B304D7A000EBF1B /* LoginVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCManager.h; sourceTree = "<group>"; };
 		665FD5BD1B304D7A000EBF1B /* LoginVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVCManager.m; sourceTree = "<group>"; };
 		6689680B1B4EA2C200003635 /* BatteryCheckVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryCheckVCManager.h; sourceTree = "<group>"; };
@@ -411,7 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				665FD4001B3042E2000EBF1B /* afnetworking */,
-				665FD4271B3042E2000EBF1B /* MagicalRecord */,
 				665FD4B01B3042E2000EBF1B /* MBProgressHUD */,
 				665FD4E01B3042E3000EBF1B /* MJRefresh */,
 				665FD4F91B3042E3000EBF1B /* MKBase64 */,
@@ -528,14 +498,6 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		665FD4271B3042E2000EBF1B /* MagicalRecord */ = {
-			isa = PBXGroup;
-			children = (
-				665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */,
-			);
-			path = MagicalRecord;
-			sourceTree = "<group>";
-		};
 		665FD4B01B3042E2000EBF1B /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,17 +587,6 @@
 				665FD50C1B3042E3000EBF1B /* popoverBg@2x.png */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		665FD5AD1B3043FF000EBF1B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				665FD5B51B3043FF000EBF1B /* libMagicalRecord-iOS.a */,
-				665FD5B71B3043FF000EBF1B /* libMagicalRecord-OSX.dylib */,
-				665FD5B91B3043FF000EBF1B /* MagicalRecordTests-iOS.xctest */,
-				665FD5BB1B3043FF000EBF1B /* MagicalRecordTests-OSX.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		668A498C1B38002F0067F3F3 /* 注册 */ = {
@@ -774,12 +725,6 @@
 			mainGroup = 665FD3A11B303ADB000EBF1B;
 			productRefGroup = 665FD3AB1B303ADB000EBF1B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 665FD5AD1B3043FF000EBF1B /* Products */;
-					ProjectRef = 665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				665FD3A91B303ADB000EBF1B /* HengXing */,
@@ -787,37 +732,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		665FD5B51B3043FF000EBF1B /* libMagicalRecord-iOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libMagicalRecord-iOS.a";
-			remoteRef = 665FD5B41B3043FF000EBF1B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		665FD5B71B3043FF000EBF1B /* libMagicalRecord-OSX.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = "libMagicalRecord-OSX.dylib";
-			remoteRef = 665FD5B61B3043FF000EBF1B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		665FD5B91B3043FF000EBF1B /* MagicalRecordTests-iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "MagicalRecordTests-iOS.xctest";
-			remoteRef = 665FD5B81B3043FF000EBF1B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		665FD5BB1B3043FF000EBF1B /* MagicalRecordTests-OSX.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "MagicalRecordTests-OSX.xctest";
-			remoteRef = 665FD5BA1B3043FF000EBF1B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		665FD3A81B303ADB000EBF1B /* Resources */ = {
