@@ -8,6 +8,12 @@
 
 #import "MainViewController.h"
 #import "DRButtonItem.h"
+#import "WPWarrantyPeriodQueryVC.h"
+#import "TRTestRecordListTVC.h"
+#import "SIStatisticalInformationTVC.h"
+#import "LMContainerVC.h"
+
+
 @interface MainViewController ()<DRButtonItemDelegate,UIScrollViewDelegate>
 - (IBAction)topRightItemClicked:(UIBarButtonItem *)sender;
 ///检测
@@ -57,7 +63,41 @@
 #pragma mark -
 #pragma mark -- DRButtonItemDelegate
 -(void)buttonItem:(DRButtonItem *)item seletedItemType:(DRButtonItemType)type{
-    
+    switch (type) {
+        case DRButtonItemType_check:
+        {
+            
+        }
+            break;
+        case DRButtonItemType_checkRecoder:
+        {
+            [TRTestRecordListTVC show:self.navigationController];
+        }
+            break;
+        case DRButtonItemType_helpInfo:
+        {
+            
+        }
+            break;
+        case DRButtonItemType_logistic:
+        {
+            [LMContainerVC show:self.navigationController];
+        }
+            break;
+        case DRButtonItemType_statistic:
+        {
+            [SIStatisticalInformationTVC show:self.navigationController];
+        }
+            break;
+        case DRButtonItemType_warrantyDate:
+        {
+            [WPWarrantyPeriodQueryVC show:self.navigationController];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 #pragma mark -
 
