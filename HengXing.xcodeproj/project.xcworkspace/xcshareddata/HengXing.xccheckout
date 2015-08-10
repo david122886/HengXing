@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>009F418A-A3D2-454B-B3F4-20A3A0E36222</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HengXing</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D72C255610BDB15ABE69D6976AE23F404CED6003</key>
+		<string>github.com:david122886/HengXing.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HengXing.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D72C255610BDB15ABE69D6976AE23F404CED6003</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:david122886/HengXing.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D72C255610BDB15ABE69D6976AE23F404CED6003</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D72C255610BDB15ABE69D6976AE23F404CED6003</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HengXing</string>
+		</dict>
+	</array>
+</dict>
+</plist>

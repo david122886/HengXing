@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664B46811B42CBBE00CAFED7 /* DRButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 664B46801B42CBBE00CAFED7 /* DRButtonItem.m */; };
+		664D6FB31B415E6200E30D10 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 664D6FB21B415E6200E30D10 /* AgreementViewController.m */; };
+		664D6FBB1B41743D00E30D10 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 664D6FBA1B41743D00E30D10 /* MainTabBarViewController.m */; };
 		665FD3B01B303ADB000EBF1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD3AF1B303ADB000EBF1B /* main.m */; };
 		665FD3B31B303ADB000EBF1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD3B21B303ADB000EBF1B /* AppDelegate.m */; };
 		665FD3B61B303ADB000EBF1B /* HengXing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 665FD3B41B303ADB000EBF1B /* HengXing.xcdatamodeld */; };
@@ -75,11 +78,20 @@
 		665FD5901B3042E3000EBF1B /* WEPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD5101B3042E3000EBF1B /* WEPopoverController.m */; };
 		665FD5A81B304360000EBF1B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665FD5A71B304360000EBF1B /* CoreData.framework */; };
 		665FD5BE1B304D7A000EBF1B /* LoginVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 665FD5BD1B304D7A000EBF1B /* LoginVCManager.m */; };
+		6689680D1B4EA2C200003635 /* BatteryCheckVCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6689680C1B4EA2C200003635 /* BatteryCheckVCManager.m */; };
 		668A49931B3800650067F3F3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668A49921B3800650067F3F3 /* RegisterViewController.m */; };
 		6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */; };
 		66AB58C81B3C2380002866E8 /* BrandTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AB58C71B3C2380002866E8 /* BrandTableViewController.m */; };
 		66C636571B35649100AD7458 /* DRDropMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C636561B35649100AD7458 /* DRDropMenuButton.m */; };
+		66C675F11B4579AE00D048A2 /* BatteryCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C675F01B4579AE00D048A2 /* BatteryCheckViewController.m */; };
 		66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D746091B399517003BE438 /* AddressTableViewController.m */; };
+		66F5AD901B52314700481695 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD8F1B52314700481695 /* SettingViewController.m */; };
+		66F5AD931B52358B00481695 /* BlueTeethViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD921B52358B00481695 /* BlueTeethViewController.m */; };
+		66F5AD961B5258AD00481695 /* ChildenAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD951B5258AD00481695 /* ChildenAccountTableViewController.m */; };
+		66F5AD9C1B525C6300481695 /* RegisterChildAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD9B1B525C6300481695 /* RegisterChildAccountViewController.m */; };
+		66F5AD9F1B52610800481695 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD9E1B52610800481695 /* AboutViewController.m */; };
+		66FC6DAB1B41820500C92B45 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FC6DAA1B41820500C92B45 /* MainViewController.m */; };
+		66FDFE3D1B3EAE640081E09E /* RegisterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FDFE3C1B3EAE640081E09E /* RegisterFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +133,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		664B467F1B42CBBE00CAFED7 /* DRButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRButtonItem.h; sourceTree = "<group>"; };
+		664B46801B42CBBE00CAFED7 /* DRButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRButtonItem.m; sourceTree = "<group>"; };
+		664D6FB11B415E6200E30D10 /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
+		664D6FB21B415E6200E30D10 /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
+		664D6FB91B41743D00E30D10 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		664D6FBA1B41743D00E30D10 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		665FD3AA1B303ADB000EBF1B /* HengXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HengXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665FD3AE1B303ADB000EBF1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		665FD3AF1B303ADB000EBF1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -243,6 +261,8 @@
 		665FD5AC1B3043FF000EBF1B /* MagicalRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MagicalRecord.xcodeproj; sourceTree = "<group>"; };
 		665FD5BC1B304D7A000EBF1B /* LoginVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVCManager.h; sourceTree = "<group>"; };
 		665FD5BD1B304D7A000EBF1B /* LoginVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVCManager.m; sourceTree = "<group>"; };
+		6689680B1B4EA2C200003635 /* BatteryCheckVCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryCheckVCManager.h; sourceTree = "<group>"; };
+		6689680C1B4EA2C200003635 /* BatteryCheckVCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryCheckVCManager.m; sourceTree = "<group>"; };
 		668A49911B3800650067F3F3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		668A49921B3800650067F3F3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6691C5681B36F54600A4C6FC /* ForgotPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPwdViewController.h; sourceTree = "<group>"; };
@@ -251,8 +271,24 @@
 		66AB58C71B3C2380002866E8 /* BrandTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandTableViewController.m; sourceTree = "<group>"; };
 		66C636551B35649100AD7458 /* DRDropMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRDropMenuButton.h; sourceTree = "<group>"; };
 		66C636561B35649100AD7458 /* DRDropMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRDropMenuButton.m; sourceTree = "<group>"; };
+		66C675EF1B4579AE00D048A2 /* BatteryCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryCheckViewController.h; sourceTree = "<group>"; };
+		66C675F01B4579AE00D048A2 /* BatteryCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryCheckViewController.m; sourceTree = "<group>"; };
 		66D746081B399517003BE438 /* AddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewController.h; sourceTree = "<group>"; };
 		66D746091B399517003BE438 /* AddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewController.m; sourceTree = "<group>"; };
+		66F5AD8E1B52314700481695 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		66F5AD8F1B52314700481695 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		66F5AD911B52358B00481695 /* BlueTeethViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueTeethViewController.h; sourceTree = "<group>"; };
+		66F5AD921B52358B00481695 /* BlueTeethViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueTeethViewController.m; sourceTree = "<group>"; };
+		66F5AD941B5258AD00481695 /* ChildenAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildenAccountTableViewController.h; sourceTree = "<group>"; };
+		66F5AD951B5258AD00481695 /* ChildenAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildenAccountTableViewController.m; sourceTree = "<group>"; };
+		66F5AD9A1B525C6300481695 /* RegisterChildAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterChildAccountViewController.h; sourceTree = "<group>"; };
+		66F5AD9B1B525C6300481695 /* RegisterChildAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterChildAccountViewController.m; sourceTree = "<group>"; };
+		66F5AD9D1B52610800481695 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		66F5AD9E1B52610800481695 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		66FC6DA91B41820500C92B45 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		66FC6DAA1B41820500C92B45 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		66FDFE3B1B3EAE640081E09E /* RegisterFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterFilter.h; sourceTree = "<group>"; };
+		66FDFE3C1B3EAE640081E09E /* RegisterFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +310,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		664D6FB81B4173FF00E30D10 /* 主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				665FD3BA1B303ADB000EBF1B /* Main.storyboard */,
+				664D6FB91B41743D00E30D10 /* MainTabBarViewController.h */,
+				664D6FBA1B41743D00E30D10 /* MainTabBarViewController.m */,
+				66FC6DA91B41820500C92B45 /* MainViewController.h */,
+				66FC6DAA1B41820500C92B45 /* MainViewController.m */,
+				664B467F1B42CBBE00CAFED7 /* DRButtonItem.h */,
+				664B46801B42CBBE00CAFED7 /* DRButtonItem.m */,
+			);
+			path = "主界面";
+			sourceTree = "<group>";
+		};
 		665FD3A11B303ADB000EBF1B = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +346,9 @@
 		665FD3AC1B303ADB000EBF1B /* HengXing */ = {
 			isa = PBXGroup;
 			children = (
+				66F5AD891B52312700481695 /* 设置 */,
+				66C675EA1B45798700D048A2 /* 电池检测 */,
+				664D6FB81B4173FF00E30D10 /* 主界面 */,
 				66C636531B35647700AD7458 /* 自定义控件 */,
 				665FD3F91B304224000EBF1B /* model */,
 				665FD3F51B30410F000EBF1B /* serverData */,
@@ -306,7 +359,6 @@
 				665FD3B21B303ADB000EBF1B /* AppDelegate.m */,
 				665FD3B71B303ADB000EBF1B /* ViewController.h */,
 				665FD3B81B303ADB000EBF1B /* ViewController.m */,
-				665FD3BA1B303ADB000EBF1B /* Main.storyboard */,
 				665FD3BD1B303ADB000EBF1B /* Images.xcassets */,
 				665FD3BF1B303ADB000EBF1B /* LaunchScreen.xib */,
 				665FD3B41B303ADB000EBF1B /* HengXing.xcdatamodeld */,
@@ -387,6 +439,8 @@
 			children = (
 				665FD3EC1B3040CD000EBF1B /* LoginFilter.h */,
 				665FD3ED1B3040CD000EBF1B /* LoginFilter.m */,
+				66FDFE3B1B3EAE640081E09E /* RegisterFilter.h */,
+				66FDFE3C1B3EAE640081E09E /* RegisterFilter.m */,
 				665FD3EE1B3040CD000EBF1B /* NSFileManager+Path.h */,
 				665FD3EF1B3040CD000EBF1B /* NSFileManager+Path.m */,
 				665FD3F01B3040CD000EBF1B /* NSURLRequest+Error.h */,
@@ -593,6 +647,8 @@
 				66D746091B399517003BE438 /* AddressTableViewController.m */,
 				66AB58C61B3C2380002866E8 /* BrandTableViewController.h */,
 				66AB58C71B3C2380002866E8 /* BrandTableViewController.m */,
+				664D6FB11B415E6200E30D10 /* AgreementViewController.h */,
+				664D6FB21B415E6200E30D10 /* AgreementViewController.m */,
 			);
 			name = "注册";
 			sourceTree = "<group>";
@@ -621,6 +677,34 @@
 				6691C5691B36F54600A4C6FC /* ForgotPwdViewController.m */,
 			);
 			name = "找回密码";
+			sourceTree = "<group>";
+		};
+		66C675EA1B45798700D048A2 /* 电池检测 */ = {
+			isa = PBXGroup;
+			children = (
+				66C675EF1B4579AE00D048A2 /* BatteryCheckViewController.h */,
+				66C675F01B4579AE00D048A2 /* BatteryCheckViewController.m */,
+				6689680B1B4EA2C200003635 /* BatteryCheckVCManager.h */,
+				6689680C1B4EA2C200003635 /* BatteryCheckVCManager.m */,
+			);
+			path = "电池检测";
+			sourceTree = "<group>";
+		};
+		66F5AD891B52312700481695 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				66F5AD8E1B52314700481695 /* SettingViewController.h */,
+				66F5AD8F1B52314700481695 /* SettingViewController.m */,
+				66F5AD911B52358B00481695 /* BlueTeethViewController.h */,
+				66F5AD921B52358B00481695 /* BlueTeethViewController.m */,
+				66F5AD941B5258AD00481695 /* ChildenAccountTableViewController.h */,
+				66F5AD951B5258AD00481695 /* ChildenAccountTableViewController.m */,
+				66F5AD9A1B525C6300481695 /* RegisterChildAccountViewController.h */,
+				66F5AD9B1B525C6300481695 /* RegisterChildAccountViewController.m */,
+				66F5AD9D1B52610800481695 /* AboutViewController.h */,
+				66F5AD9E1B52610800481695 /* AboutViewController.m */,
+			);
+			path = "设置";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -781,13 +865,16 @@
 				665FD58F1B3042E3000EBF1B /* WEPopoverContainerView.m in Sources */,
 				665FD57F1B3042E3000EBF1B /* UIScrollView+MJExtension.m in Sources */,
 				665FD51E1B3042E3000EBF1B /* UIButton+AFNetworking.m in Sources */,
+				66F5AD9C1B525C6300481695 /* RegisterChildAccountViewController.m in Sources */,
 				665FD5121B3042E3000EBF1B /* AFHTTPRequestOperation.m in Sources */,
 				665FD5901B3042E3000EBF1B /* WEPopoverController.m in Sources */,
 				665FD55A1B3042E3000EBF1B /* MBProgressHUD.m in Sources */,
 				665FD5771B3042E3000EBF1B /* MJRefreshComponent.m in Sources */,
 				66C636571B35649100AD7458 /* DRDropMenuButton.m in Sources */,
 				665FD3B61B303ADB000EBF1B /* HengXing.xcdatamodeld in Sources */,
+				66FC6DAB1B41820500C92B45 /* MainViewController.m in Sources */,
 				665FD5811B3042E3000EBF1B /* UIView+MJExtension.m in Sources */,
+				664D6FBB1B41743D00E30D10 /* MainTabBarViewController.m in Sources */,
 				6691C56A1B36F54600A4C6FC /* ForgotPwdViewController.m in Sources */,
 				665FD3B31B303ADB000EBF1B /* AppDelegate.m in Sources */,
 				66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */,
@@ -799,6 +886,8 @@
 				665FD57D1B3042E3000EBF1B /* MJRefreshLegendFooter.m in Sources */,
 				665FD51B1B3042E3000EBF1B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				665FD3EA1B304072000EBF1B /* QCheckBox.m in Sources */,
+				664B46811B42CBBE00CAFED7 /* DRButtonItem.m in Sources */,
+				6689680D1B4EA2C200003635 /* BatteryCheckVCManager.m in Sources */,
 				665FD5171B3042E3000EBF1B /* AFURLConnectionOperation.m in Sources */,
 				665FD5131B3042E3000EBF1B /* AFHTTPRequestOperationManager.m in Sources */,
 				665FD3F31B3040CD000EBF1B /* NSFileManager+Path.m in Sources */,
@@ -809,25 +898,32 @@
 				665FD3FE1B304234000EBF1B /* UserObj.m in Sources */,
 				66AB58C81B3C2380002866E8 /* BrandTableViewController.m in Sources */,
 				665FD3FF1B304234000EBF1B /* UserObj+save.m in Sources */,
+				664D6FB31B415E6200E30D10 /* AgreementViewController.m in Sources */,
 				665FD5781B3042E3000EBF1B /* MJRefreshConst.m in Sources */,
 				665FD5161B3042E3000EBF1B /* AFSecurityPolicy.m in Sources */,
+				66C675F11B4579AE00D048A2 /* BatteryCheckViewController.m in Sources */,
+				66F5AD9F1B52610800481695 /* AboutViewController.m in Sources */,
 				665FD3B91B303ADB000EBF1B /* ViewController.m in Sources */,
 				665FD5181B3042E3000EBF1B /* AFURLRequestSerialization.m in Sources */,
 				665FD3B01B303ADB000EBF1B /* main.m in Sources */,
 				665FD5801B3042E3000EBF1B /* UIScrollView+MJRefresh.m in Sources */,
+				66F5AD961B5258AD00481695 /* ChildenAccountTableViewController.m in Sources */,
 				665FD5191B3042E3000EBF1B /* AFURLResponseSerialization.m in Sources */,
 				665FD3DD1B303E83000EBF1B /* LoginViewController.m in Sources */,
 				665FD5841B3042E3000EBF1B /* PopupListComponent.m in Sources */,
 				665FD51C1B3042E3000EBF1B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				665FD5211B3042E3000EBF1B /* UIRefreshControl+AFNetworking.m in Sources */,
 				665FD5201B3042E3000EBF1B /* UIProgressView+AFNetworking.m in Sources */,
+				66F5AD931B52358B00481695 /* BlueTeethViewController.m in Sources */,
 				665FD3F81B30410F000EBF1B /* ServiceManager.m in Sources */,
 				665FD5221B3042E3000EBF1B /* UIWebView+AFNetworking.m in Sources */,
 				665FD57B1B3042E3000EBF1B /* MJRefreshGifHeader.m in Sources */,
 				665FD5141B3042E3000EBF1B /* AFHTTPSessionManager.m in Sources */,
 				665FD3F41B3040CD000EBF1B /* NSURLRequest+Error.m in Sources */,
+				66FDFE3D1B3EAE640081E09E /* RegisterFilter.m in Sources */,
 				665FD3F21B3040CD000EBF1B /* LoginFilter.m in Sources */,
 				665FD5791B3042E3000EBF1B /* MJRefreshFooter.m in Sources */,
+				66F5AD901B52314700481695 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +952,7 @@
 				665FD3BB1B303ADB000EBF1B /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		665FD3BF1B303ADB000EBF1B /* LaunchScreen.xib */ = {
@@ -952,6 +1049,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Weikang Bao (DRX28Q72LC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Weikang Bao (DRX28Q72LC)";
 				INFOPLIST_FILE = HengXing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3cb64044-4fff-4bda-be23-bdc6146640eb";
@@ -965,6 +1063,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Xiao Xiang Shuyuan (7Y7NSKD85B)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xiao Xiang Shuyuan (7Y7NSKD85B)";
 				INFOPLIST_FILE = HengXing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9699846c-d598-44c1-8514-238c02458333";

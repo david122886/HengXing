@@ -14,21 +14,44 @@
 @end
 
 @implementation BrandTableViewController
+- (IBAction)rightTopBarItemClicked:(UIBarButtonItem *)sender {
+    if (self.brandsSelectedBlock) {
+        NSMutableArray *selectedDatas = @[].mutableCopy;
+        [self.selectedIndexPathsArr enumerateObjectsUsingBlock:^(NSIndexPath *path, NSUInteger idx, BOOL *stop) {
+            NSString *key = [self.dataDic allKeys][path.section];
+            NSArray *values = self.dataDic[key];
+            [selectedDatas addObject:values[path.row]];
+        }];
+        self.brandsSelectedBlock(selectedDatas);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.selectedIndexPathsArr = @[].mutableCopy;
+    [self.navigationItem.rightBarButtonItem setEnabled:NO];
+    if(!self.selectedIndexPathsArr) self.selectedIndexPathsArr = @[].mutableCopy;
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"header"];
-    [self showBrands];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)showBrands{
+-(void)showBrandsWithSelectedBrands:(NSArray *)hasSelectedBrands{
     self.dataDic = [self testData];
+    if(!self.selectedIndexPathsArr) self.selectedIndexPathsArr = @[].mutableCopy;
+    if (hasSelectedBrands && hasSelectedBrands.count > 0) {
+        NSArray *keys = [self.dataDic allKeys];
+        NSMutableArray *seletedPath = @[].mutableCopy;
+        [hasSelectedBrands enumerateObjectsUsingBlock:^(NSString *value, NSUInteger idx, BOOL *stop) {
+            [keys enumerateObjectsUsingBlock:^(NSString *key, NSUInteger section, BOOL *stop) {
+                NSArray *values = [self.dataDic objectForKey:key];
+                if ([values containsObject:value]) {
+                    [seletedPath addObject:[NSIndexPath indexPathForRow:[values indexOfObject:value] inSection:section]];
+                    *stop = YES;
+                }
+            }];
+        }];
+        [self.selectedIndexPathsArr addObjectsFromArray:seletedPath];
+    }
+    
     [self.tableView reloadData];
 }
 
@@ -50,8 +73,6 @@
 #pragma mark -
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSString *key = [[self.dataDic allKeys] objectAtIndex:indexPath.section];
-//    NSArray *values = [self.dataDic objectForKey:key];
     __block NSIndexPath *path = nil;
     [self.selectedIndexPathsArr enumerateObjectsUsingBlock:^(NSIndexPath *selectedPath, NSUInteger idx, BOOL *stop) {
         if (selectedPath.section == indexPath.section && selectedPath.row == indexPath.row) {
@@ -65,6 +86,7 @@
         [self.selectedIndexPathsArr addObject:indexPath];
     }
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.navigationItem.rightBarButtonItem setEnabled:self.selectedIndexPathsArr.count >0];
 }
 #pragma mark --
 

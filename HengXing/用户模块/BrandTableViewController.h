@@ -12,5 +12,5 @@
  */
 @interface BrandTableViewController : UITableViewController
 @property (nonatomic,strong) void (^brandsSelectedBlock)(NSArray *brandsArray);
--(void)showBrands;
+-(void)showBrandsWithSelectedBrands:(NSArray *)hasSelectedBrands;
 @end

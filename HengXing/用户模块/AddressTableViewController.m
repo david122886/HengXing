@@ -23,19 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"header"];
-//    [self showProvince];
-    [self showCitysForProvinceName:@"安徽省"];
-    self.provinceSelectedBlock = ^(NSString *province){NSLog(@"selected province:%@",province);};
-    self.citySelectedBlock = ^(NSString *city){NSLog(@"selected city:%@",city);};
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 -(void)showProvince{
     _isProvinceSelected = YES;
+    [self.navigationItem setTitle:@"选择省份"];
     NSDictionary *datas = [self testData];
     NSArray *keys = [datas allKeys];
     NSMutableDictionary *allProvince = @{}.mutableCopy;
@@ -53,6 +45,7 @@
 
 -(void)showCitysForProvinceName:(NSString*)provinceName{
     _isProvinceSelected = NO;
+    [self.navigationItem setTitle:@"选择城市"];
     NSDictionary *datas = [self testData];
     
     NSArray *allValues = [datas allValues];
@@ -72,6 +65,7 @@
     self.dataDic = citysDic;
     [self.tableView reloadData];
 }
+
 -(NSDictionary*)testData{
     NSMutableDictionary *provinceDic = @{}.mutableCopy;
     NSMutableDictionary *citysDic = @{}.mutableCopy;
@@ -150,6 +144,7 @@
             self.citySelectedBlock([values objectAtIndex:indexPath.row]);
         }
     }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark --
 
