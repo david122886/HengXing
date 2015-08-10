@@ -13,5 +13,5 @@
 #import "NoRotateTVCViewController.h"
 
 @interface TRTestRecordListTVC : NoRotateTVCViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end

@@ -11,5 +11,5 @@
 #import "NoRotateTVCViewController.h"
 
 @interface SIStatisticalInformationTVC : NoRotateTVCViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end

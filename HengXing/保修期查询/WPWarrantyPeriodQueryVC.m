@@ -20,6 +20,11 @@
 @end
 
 @implementation WPWarrantyPeriodQueryVC
++ (void)show:(UINavigationController *)nvc {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"LogisticsManage" bundle:nil];
+    WPWarrantyPeriodQueryVC *tvc = [story instantiateViewControllerWithIdentifier:@"WPWarrantyPeriodQueryVC"];
+    [nvc pushViewController:tvc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

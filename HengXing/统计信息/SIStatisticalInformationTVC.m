@@ -22,6 +22,11 @@
 @end
 
 @implementation SIStatisticalInformationTVC
++ (void)show:(UINavigationController *)nvc {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"LogisticsManage" bundle:nil];
+    SIStatisticalInformationTVC *tvc = [story instantiateViewControllerWithIdentifier:@"SIStatisticalInformationTVC"];
+    [nvc pushViewController:tvc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

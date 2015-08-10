@@ -14,6 +14,11 @@
 @end
 
 @implementation TRTestRecordListTVC
++ (void)show:(UINavigationController *)nvc {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"LogisticsManage" bundle:nil];
+    TRTestRecordListTVC *tvc = [story instantiateViewControllerWithIdentifier:@"TRTestRecordListTVC"];
+    [nvc pushViewController:tvc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

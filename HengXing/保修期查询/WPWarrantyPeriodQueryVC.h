@@ -11,5 +11,5 @@
 #import "NoRotateViewController.h"
 
 @interface WPWarrantyPeriodQueryVC : NoRotateViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end

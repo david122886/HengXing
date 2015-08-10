@@ -21,6 +21,11 @@
 @end
 
 @implementation LMContainerVC
++ (void)show:(UINavigationController *)nvc {
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"LogisticsManage" bundle:nil];
+    LMContainerVC *tvc = [story instantiateViewControllerWithIdentifier:@"LMContainerVC"];
+    [nvc pushViewController:tvc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

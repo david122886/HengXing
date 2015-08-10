@@ -13,5 +13,5 @@
 #import "NoRotateViewController.h"
 
 @interface LMContainerVC : NoRotateViewController
-
++ (void)show:(UINavigationController *)nvc;
 @end
