@@ -32,6 +32,7 @@
     _isSalesMan = NO;
     [self _initView];
     _leftTabSelected = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)_initView {
@@ -71,6 +72,8 @@
     [self addChildViewController:_leftViewController];
     [_leftViewController didMoveToParentViewController:self];
     [_containerView addSubview:_leftViewController.view];
+    [_containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[subView]|" options:0 metrics:nil views:@{@"subView":_leftViewController.view}]];
+    [_containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[subView]|" options:0 metrics:nil views:@{@"subView":_leftViewController.view}]];
     _leftViewController.view.hidden = NO;
     
     NSLog(@"containerFrame:%@", NSStringFromCGRect(_containerView.frame));
@@ -79,21 +82,17 @@
     [self addChildViewController:_rightViewController];
     [_rightViewController didMoveToParentViewController:self];
     [_containerView addSubview:_rightViewController.view];
+    [_containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[subView]|" options:0 metrics:nil views:@{@"subView":_rightViewController.view}]];
+    [_containerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[subView]|" options:0 metrics:nil views:@{@"subView":_rightViewController.view}]];
     _rightViewController.view.hidden = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    _rightViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
-    _leftViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
-    NSLog(@"containerFrame:%@", NSStringFromCGRect(_containerView.frame));
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-//    _rightViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
-//    _leftViewController.view.frame = (CGRect){0, 0, _containerView.frame.size};
-    NSLog(@"containerFrame:%@", NSStringFromCGRect(_containerView.frame));
 }
 
 - (void)didReceiveMemoryWarning {
