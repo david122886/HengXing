@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="adf-kL-DZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="adf-kL-DZh">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -993,7 +993,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="400" id="HKA-C2-SRQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="400" id="HKA-C2-SRQ" customClass="LogisticsTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HKA-C2-SRQ" id="kNr-1Z-c0l">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -1211,6 +1211,13 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="haloView" destination="FQN-bO-ECe" id="mNv-fg-k4V"/>
+                                            <outlet property="labelNumberThisMonth" destination="CbW-Sn-1k0" id="37x-Xj-JJm"/>
+                                            <outlet property="labelNumberThreeMonth" destination="pcV-HR-cL3" id="yPW-zy-cUI"/>
+                                            <outlet property="leftCircleView" destination="NHF-s5-RFA" id="84M-Q8-OiT"/>
+                                            <outlet property="rightCircleView" destination="bSJ-b1-yaz" id="nnf-xp-nVr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1222,15 +1229,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="19f-sP-4X2"/>
                     <connections>
-                        <outlet property="haloView" destination="FQN-bO-ECe" id="ZBu-ou-C1g"/>
                         <outlet property="label1" destination="pFX-2T-gQp" id="Qxm-jI-hJQ"/>
                         <outlet property="label2" destination="uP9-1j-31A" id="Kic-fz-gMA"/>
                         <outlet property="label3" destination="lKN-BU-GaZ" id="dz9-ZL-EKR"/>
                         <outlet property="label4" destination="eDK-pM-CvX" id="pkt-aS-F7W"/>
-                        <outlet property="labelNumberThisMonth" destination="CbW-Sn-1k0" id="t6W-da-Pwp"/>
-                        <outlet property="labelNumberThreeMonth" destination="pcV-HR-cL3" id="2P6-MD-GbQ"/>
-                        <outlet property="leftCircleView" destination="NHF-s5-RFA" id="zuo-Uz-tge"/>
-                        <outlet property="rightCircleView" destination="bSJ-b1-yaz" id="ygL-2J-2cl"/>
+                        <outlet property="logisticsTableCell" destination="HKA-C2-SRQ" id="Ksw-2y-Qbf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXH-G2-PHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -6056,7 +6059,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vuR-wA-dB4" id="Wzg-cf-YDJ">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHl-2V-0RI">
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHl-2V-0RI">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
@@ -6073,7 +6076,7 @@
                                                 </mask>
                                             </variation>
                                         </view>
-                                        <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uep-ml-vMK">
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uep-ml-vMK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
@@ -8043,7 +8046,7 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
-                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKq-qJ-bSP" userLabel="lineView">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKq-qJ-bSP" userLabel="lineView">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>

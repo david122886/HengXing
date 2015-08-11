@@ -85,6 +85,7 @@
 		66C636571B35649100AD7458 /* DRDropMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C636561B35649100AD7458 /* DRDropMenuButton.m */; };
 		66C675F11B4579AE00D048A2 /* BatteryCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C675F01B4579AE00D048A2 /* BatteryCheckViewController.m */; };
 		66D7460A1B399517003BE438 /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D746091B399517003BE438 /* AddressTableViewController.m */; };
+		66F0E8181B7A193A00034636 /* LogisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F0E8171B7A193A00034636 /* LogisticsTableViewCell.m */; };
 		66F5AD901B52314700481695 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD8F1B52314700481695 /* SettingViewController.m */; };
 		66F5AD931B52358B00481695 /* BlueTeethViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD921B52358B00481695 /* BlueTeethViewController.m */; };
 		66F5AD961B5258AD00481695 /* ChildenAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F5AD951B5258AD00481695 /* ChildenAccountTableViewController.m */; };
@@ -276,6 +277,8 @@
 		66C675F01B4579AE00D048A2 /* BatteryCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryCheckViewController.m; sourceTree = "<group>"; };
 		66D746081B399517003BE438 /* AddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewController.h; sourceTree = "<group>"; };
 		66D746091B399517003BE438 /* AddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewController.m; sourceTree = "<group>"; };
+		66F0E8161B7A193A00034636 /* LogisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogisticsTableViewCell.h; sourceTree = "<group>"; };
+		66F0E8171B7A193A00034636 /* LogisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogisticsTableViewCell.m; sourceTree = "<group>"; };
 		66F5AD8E1B52314700481695 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		66F5AD8F1B52314700481695 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		66F5AD911B52358B00481695 /* BlueTeethViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueTeethViewController.h; sourceTree = "<group>"; };
@@ -784,6 +787,8 @@
 			children = (
 				93D2E2A01B52A63B0044564C /* SIStatisticalInformationTVC.h */,
 				93D2E2A11B52A63B0044564C /* SIStatisticalInformationTVC.m */,
+				66F0E8161B7A193A00034636 /* LogisticsTableViewCell.h */,
+				66F0E8171B7A193A00034636 /* LogisticsTableViewCell.m */,
 			);
 			path = "统计信息";
 			sourceTree = "<group>";
@@ -1077,6 +1082,7 @@
 				66C675F11B4579AE00D048A2 /* BatteryCheckViewController.m in Sources */,
 				66F5AD9F1B52610800481695 /* AboutViewController.m in Sources */,
 				665FD3B91B303ADB000EBF1B /* ViewController.m in Sources */,
+				66F0E8181B7A193A00034636 /* LogisticsTableViewCell.m in Sources */,
 				665FD5181B3042E3000EBF1B /* AFURLRequestSerialization.m in Sources */,
 				93FEBDCF1B4D722500D3F9D7 /* LMManagerSigningTVC.m in Sources */,
 				665FD3B01B303ADB000EBF1B /* main.m in Sources */,
