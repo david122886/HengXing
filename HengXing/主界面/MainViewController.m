@@ -38,6 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,14 +105,14 @@
 
 #pragma mark -
 #pragma mark -- UIScrollViewDelegate
--(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (scrollView.contentOffset.x >= CGRectGetWidth(scrollView.frame)) {
+
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (scrollView.contentOffset.x >= CGRectGetWidth(scrollView.frame)-20) {
         self.pageControl.currentPage = 1;
     }else{
         self.pageControl.currentPage = 0;
     }
 }
-
-
 #pragma mark -
 @end
